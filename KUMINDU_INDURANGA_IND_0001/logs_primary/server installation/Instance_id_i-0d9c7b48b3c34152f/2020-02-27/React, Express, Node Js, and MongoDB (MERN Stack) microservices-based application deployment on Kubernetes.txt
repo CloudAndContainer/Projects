@@ -1,0 +1,57 @@
+@Author Kumindu Induranga Ranawaka
+
+#Application Implementation
+
+   1.git clone https://github.com/aamirpinger/todo-app-client-server-kubernetes.git
+
+   2.cd todo-app-client-server-kubernetes
+
+   3.cd client
+
+   4.ls
+     - expected outcome : check any file name as Dockerfile
+
+   5.sudo nano Dockerfile
+     - expected outcome :
+
+       FROM node:alpine as todo-app-build
+
+       WORKDIR /client
+
+       COPY package.json yarn.lock README.md ./
+
+       RUN yarn
+
+       COPY ./public ./public
+
+       COPY ./src ./src
+
+       ENV REACT_APP_baseAPIURL=<backend-app-service-ip>:<port>
+
+       RUN yarn build
+
+       FROM nginx:latest
+
+       LABEL maintainer=Aamir-Pinger
+
+    6.cd  ../server
+
+    8.ls
+      - expected outcome : check any file name as server-app-service.yaml
+
+    7.sudo nano server-app-service.yaml
+      - expected outcome :
+                 apiVersion: v1
+                 kind: Service
+                 metadata:
+                   name: todo-backend-service
+                 spec:
+                   ports:
+                    - port: 5000
+                      targetPort: 5000
+                 selector:
+                     app: todo-server-app
+                 type: LoadBalancer
+
+
+      

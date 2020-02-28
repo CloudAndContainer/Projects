@@ -1,0 +1,73 @@
+@Author Kumindu Induranga Ranawaka
+
+#Basic Installtion
+
+    1.sudo apt-get update
+
+    2.sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+    3.sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    4.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+    5.sudo apt-get update
+
+    6.sudo apt-cache policy docker-ce
+
+    7.sudo apt install docker-ce
+
+    8.sudo systemctl status docker
+
+#Change Defualt Password Ubuntu User 
+
+    1.sudo su
+
+    2.passwd ubuntu
+
+    3.type you new password press enter password:demo2020
+
+#Switch Ubuntu User Again
+
+    1.su ubuntu
+
+#Executing the Docker Command Without Sudo
+
+    1.sudo usermod -aG docker ${USER}
+
+    2.su - ${USER}
+
+    3.type password press enter password:demo2020
+
+    4.id -nG
+      - expected output: ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev docker
+
+    5.sudo usermod -aG docker ubuntu #In here "ubuntu mean username"
+
+# Docker Installation Completed
+
+    1.type docker in command line check
+
+    2.docker info 
+      - expected output:
+        Client:
+          Debug Mode: false
+          Server:
+          Containers: 0
+          Running: 0
+          Paused: 0
+          Stopped: 0
+          Images: 0
+          Server Version: 19.03.6
+          Storage Driver: overlay2
+          Backing Filesystem: extfs
+          Supports d_type: true
+          Native Overlay Diff: true
+          Logging Driver: json-file
+          Cgroup Driver: cgroupfs
+ 
+
+
+ 
+
+     
+  
