@@ -25,7 +25,7 @@
       sudo chmod +x terraform-kube-kumindu-instruction.sh
       sudo ./terraform-kube-kumindu-instruction.sh
 
-##Terraform Kubernetes Dashboard Installation
+## Terraform Kubernetes Dashboard Installation
 
       sudo chmod +x terraform-kube-dashboard-kumindu-instruction.sh
       sudo ./terraform-kube-dashboard-kumindu-instruction.sh
