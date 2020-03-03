@@ -1,7 +1,7 @@
 # Elatech Terraform Installation  
 @Author Kumindu Induranga Ranawka  
 <br>
-<center><img align="center" style="margin-left:100px" width="600" height="100" src="https://github.com/CloudAndContainer/Projects/blob/master/Screen%20Shots/download.png"></center>
+<center><img align="center" style="margin-left:100px" width="600" height="150" src="https://github.com/CloudAndContainer/Projects/blob/master/Screen%20Shots/download.png"></center>
 
 First go to aws concolse create ec2 type should be t2.medium  
 
